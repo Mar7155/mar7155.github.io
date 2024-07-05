@@ -1,0 +1,78 @@
+---
+import Proyecto1 from "../imageprojects/Proyect1.webp";
+import Proyecto2 from "../imageprojects/Proyect2.webp";
+import Proyecto3 from "../imageprojects/Proyect3.webp";
+import Card from "./Card.astro";
+---
+
+<section class="contenedor" id="Projects">
+	<h1>PROJECTS</h1>
+	<div class="grid-layout">
+		<div class="box">
+			<Card numero="Project 1" descripcion="Web site built with astro and react" href="https://ieee-estl.com/" proyecto={Proyecto1}> 
+			</Card>
+		</div>
+		<div class="box">
+			<Card numero="Project 2" descripcion="Point of sales built with Java, Postgres and Docker" href="https://github.com/Mar7155/KokosControl/" proyecto={Proyecto2}> 
+			</Card>
+		</div>
+		<div class="box">
+			<Card numero="Project 3" descripcion="Web site in pogress for my bussines" href="https://mar7155.github.io/" proyecto={Proyecto3}> 
+			</Card>
+		</div>
+	</div>
+</section>
+<style>
+	h1{
+		font-family: widythin;
+		font-size: 40px;
+	}
+	.box{
+		width: 47vh;
+		height: 26vh;
+	}
+    .contenedor {
+		width: auto;
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		justify-content:space-evenly;
+		align-items: center;
+		background-color: rgb(0, 0, 0);
+	}
+	
+	.grid-layout{
+		display: grid;
+		justify-content: center;
+		padding-bottom: 10rem;
+		width: 100%;
+		grid-template: auto;
+		grid-template-columns: 0fr 0fr 0fr;
+		gap: 2rem;
+	}
+	
+	@media (max-width: 1500px) {
+		.grid-layout{
+
+			grid-template-columns: 0fr 0fr;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		.grid-layout{
+			grid-template-columns: 0fr;
+		}		
+	}
+
+	@media (max-width: 800px) {
+		.contenedor{
+			padding-top: 6rem;
+			gap: 4rem;
+		}
+		.box{
+			width: 37vh;
+			height: 20vh;
+		}		
+	}
+
+</style>

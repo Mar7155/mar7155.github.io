@@ -1,0 +1,27 @@
+---
+const { href } = Astro.props;
+---
+
+<a class="btn" href={href}>
+    <svg 
+        xmlns="http://www.w3.org/2000/svg"
+        width="8em"
+        height="8em"
+        viewBox="0 0 24 24">
+        <path fill="#000" d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6z"></path>
+    </svg>
+</a>
+
+<style>
+    .btn {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        border-radius: 8px;
+    }
+    @media (max-width: 800px){
+            .btn{ 
+                width: 20%;
+            }
+        }
+</style>

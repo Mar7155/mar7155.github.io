@@ -1,0 +1,78 @@
+--- 
+import Image from "astro/components/Image.astro";
+import Boton3 from "./Boton3.astro";
+
+const { numero, descripcion, href, proyecto} = Astro.props
+---
+
+<li class="link-card">
+	<div class="content">
+		<h2>
+			{numero}
+		</h2>
+		<p>{descripcion}</p>
+		<div class="box-img">
+			<Image class="preview" alt="project preview" title={numero} loading="lazy" decoding="async" src={proyecto}></Image>
+		</div>
+	</div>
+
+	<Boton3 href={href}></Boton3>
+	
+</li>
+<style>
+	.link-card {
+		list-style: none;
+		justify-content: space-between;
+		display: flex;
+		border-radius: 8px;
+		background: rgba(236, 235, 235, 0.932);
+		height: 100%;
+		width: auto;
+		gap: 2rem;
+	}
+	.content {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		padding-left: 1rem;
+		padding-bottom: 1rem;
+	}
+	.content h2{
+		font-family: widythin;
+		font-size:larger;
+		color: rgb(0, 0, 0);
+	}
+	.content p{
+		width: auto;
+		height: auto;
+		font-family: var(--font-rethink_sans), sans-serif;
+		font-size:16px;
+		color: rgb(59, 59, 59);
+		
+	}
+	.box-img{
+		display: flex;
+		width: auto;
+		height: max-content;
+	}
+	
+	.preview{
+			width:auto;
+			height: 100px;
+		}
+
+	@media (max-width: 800px) {
+		
+		.content h2{
+			font-size: 16px;
+			
+		}	
+
+		.content p{
+			font-size: 14px;
+		}
+		.preview{
+			height: 70px;
+		}
+	}
+</style>

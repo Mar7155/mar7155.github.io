@@ -1,5 +1,6 @@
 ---
 const { href } = Astro.props;
+import '../css/boton.css';
 ---
 
 <a class="btn" href={href}>
@@ -11,17 +12,3 @@ const { href } = Astro.props;
         <path fill="#000" d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6z"></path>
     </svg>
 </a>
-
-<style>
-    .btn {
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        border-radius: 8px;
-    }
-    @media (max-width: 800px){
-            .btn{ 
-                width: 20%;
-            }
-        }
-</style>

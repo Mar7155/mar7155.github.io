@@ -1,6 +1,6 @@
 ---
 import { string } from 'astro/zod';
-
+import '../css/layout.css'
 interface Props {
 	title: string;
 	descripcion: string;
@@ -232,57 +232,4 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 			reset();
 		}
 	</script>
-	<style is:global>
-		* {
-			box-sizing: border-box;
-		}
-		canvas {
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			z-index: -1;
-		}
-		html {
-			font-family: system-ui, sans-serif;
-			color: azure;
-			background: #000000;
-			background-size: 224px;
-			overflow-x: hidden;
-			scroll-behavior: smooth;
-		}
-		code {
-			font-family:
-				Menlo,
-				Monaco,
-				Lucida Console,
-				Liberation Mono,
-				DejaVu Sans Mono,
-				Bitstream Vera Sans Mono,
-				Courier New,
-				monospace;
-		}
-		@font-face {
-			font-family: WidyThin;
-			src: url("/WidyThin.woff") format("woff");
-			font-weight: normal;
-			font-style: normal;
-			font-display: swap;
-		}
-		main {
-			margin: auto;
-			padding: 2rem;
-			width: auto;
-			max-width: calc(100% - 2rem);
-			color: white;
-			font-size: 20px;
-			line-height: 1.6;
-		}
-		h1 {
-			font-size: 4rem;
-			font-weight: 700;
-			line-height: 1;
-			text-align: center;
-			margin-bottom: 1em;
-		}
-	</style>
 </html>

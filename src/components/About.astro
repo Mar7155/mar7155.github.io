@@ -1,30 +1,30 @@
 ---
 import { Image } from 'astro:assets';
 import Me from "../imageprofile/profile.webp";
+import '../css/about.css';
 ---
 
-<section class="contenedor" id="About">
-	<div class="box">
-		<div class="title">
+<section class="contenedor-About" id="About">
+	<div class="box-About">
+		<div class="title-About">
 			<h2>ABOUT ME</h2>
 		</div>
-		<div class="layout">
+		<div class="layout-About">
 			<div class="box-inf">
 				<div class="up">
 					<p>
-						I'm a software engineer student at the Autonomous
-						University of the State of Hidalgo (UAEH) passionate
-						about web programming, the design and print 3d. i'm
-						currently studying the 3rd semester of my career. I
-						specialize in frontend development using Astro,
-						JavaScript, and CSS. I have a database certification
-						with postgresql learned from the Netzun plataform.
+						I am a software engineering student at the Autonomous University of 
+						the State of Hidalgo (UAEH), currently in my third semester. 
+						My passion lies in web programming, design, and 3D printing. 
+						I specialize in frontend development, using Astro, JavaScript, 
+						and CSS to create intuitive and user-friendly interfaces. 
+						Recently, I obtained a PostgreSQL database certification through 
+						the Netzun platform. 
 					</p>
 					<p>
-						I'm passionate about creating intuitive and
-						user-friendly interfaces and learn new development
-						tools. Actually im studying the framework of react to
-						add at my <strong>Skills </strong>.
+						I am actively expanding my <strong>Skills </strong>set by studying 
+						the React framework and tailwindcss, aiming to enhance my development capabilities and 
+						contribute effectively to future projects.
 					</p>
 				</div>
 				<div class="down">
@@ -177,7 +177,7 @@ import Me from "../imageprofile/profile.webp";
 					</div>
 				</div>
 			</div>
-			<div class="box-img">
+			<div class="box-img-About">
 				<picture class="style">
 					<Image
 						alt="Mario Lozano"
@@ -191,134 +191,5 @@ import Me from "../imageprofile/profile.webp";
 		</div>
 	</div>
 </section>
-<style>
-	h3 {
-		font-family: WidyThin;
-		font-size: 20px;
-	}
-	.contenedor {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		height: 100vh;
-		justify-content: center;
-		align-items: center;
-		background-color: rgb(0, 0, 0);
-	}
 
-	.layout {
-		width: 80%;
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 4rem;
-	}
-	.box {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 5rem;
-	}
-	.title {
-		width: 80%;
-	}
 
-	.box h2 {
-		font-family: WidyThin;
-		font-size: 40px;
-		color: rgb(255, 255, 255);
-	}
-
-	.box-inf {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-		height: 100%;
-		width: 100%;
-		gap: 1rem;
-	}
-
-	.up {
-		height: 50%;
-	}
-	.up p {
-		color: rgba(255, 255, 255, 0.8);
-		font-family: var(--font-rethink_sans), sans-serif;
-	}
-
-	.down {
-		height: 50%;
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-	.skills {
-		width: 30%;
-	}
-	.skill-list {
-		display: grid;
-		width: auto;
-		grid-template: auto;
-		grid-template-columns: 1fr 1fr 1fr;
-		padding: 0;
-		list-style: none;
-		color: rgba(255, 255, 255, 0.8);
-		font-family: var(--font-rethink_sans), sans-serif;
-	}
-	.exp {
-		width: 50%;
-	}
-	.exp-list {
-		padding: 0;
-		list-style: none;
-		color: rgb(255, 255, 255, 0.8);
-		font-family: var(--font-rethink_sans), sans-serif;
-	}
-
-	.box-img {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.style img {
-		height: 100%;
-		width: 100%;
-	}
-
-	@media (max-width: 1260px) {
-		.box {
-			padding: 0;
-		}
-		.layout {
-			display: flex;
-			gap: 2rem;
-		}
-	}
-
-	@media (max-width: 800px) {
-		.box {
-			padding: 5rem 0rem 0rem 0rem;
-		}
-		.layout {
-			display: flex;
-			flex-direction: column-reverse;
-			gap: 2rem;
-		}
-		.down {
-			gap: 4rem;
-		}
-
-		p {
-			font-size: 12px;
-		}
-		li {
-			font-size: 12px;
-		}
-		.title {
-			text-align: center;
-		}
-	}
-</style>

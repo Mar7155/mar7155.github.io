@@ -1,13 +1,18 @@
 ---
-import { string } from 'astro/zod';
-import '../css/layout.css'
+import { string } from "astro/zod";
+import "../css/layout.css";
+
 interface Props {
 	title: string;
-	descripcion: string;
+	description: string;
 	image: string;
 }
 
-const { title, descripcion, image="/src/imagepreview/preview.gif"} = Astro.props;
+const {
+	title,
+	description = "Mi portfolio web",
+	image = "/src/imagepreview/preview.gif",
+} = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -17,20 +22,22 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<script is:inline src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+		<script
+			is:inline
+			src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
 		<script src="/src/services/smoothscrooll.js"></script>
-		<link rel="canonical" href={canonicalURL}> 
+		<link rel="canonical" href={canonicalURL} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 
-		<meta name="title" content={title}>
-		<meta name="description" content={descripcion}/>
-		<meta property="og:type" content="website"/>
-		<meta property="og:url" content={Astro.url}/>
-		<meta property="og:title" content={title}/>
-		<meta property="og:description" content={descripcion}/>
-		<meta property="og:image" content={new URL(image, Astro.url)}>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(image, Astro.url)} />
 	</head>
 
 	<body>

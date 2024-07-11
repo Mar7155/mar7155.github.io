@@ -1,0 +1,25 @@
+# Configuración del sitio
+title: Mi Sitio Web
+description: Un sitio web estático construido con Jekyll y GitHub Pages
+baseurl: ""  # Si tu sitio no está en una subcarpeta, déjalo como una cadena vacía
+
+# Configuración de Jekyll
+theme: jekyll-theme-primer  # Nombre del tema que estás utilizando
+plugins:
+  - jekyll-github-metadata
+  - jekyll-seo-tag
+  # Aquí puedes agregar más plugins si los estás utilizando
+
+# Otras configuraciones opcionales
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+# Configuración de GitHub Pages
+remote_theme: jekyll-theme-primer  # Si estás utilizando un tema remoto
+
+# Configuración de desarrollo local
+destination: _site
+incremental: false  # Habilita la construcción incremental si lo deseas

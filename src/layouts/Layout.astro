@@ -1,13 +1,5 @@
 ---
 import { string } from "astro/zod";
-import "../css/layout.css";
-import '../css/about.css';
-import '../css/boton.css';
-import '../css/card.css';
-import '../css/home.css';
-import '../css/layout.css';
-import '../css/navbar.css';
-import '../css/projects.css';
 
 interface Props {
 	title: string;
@@ -35,6 +27,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<script src="/src/services/smoothscrooll.js"></script>
 		<link rel="canonical" href={canonicalURL} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="/src/css/layout.css">
+		<link rel="stylesheet" href="/src/css/about.css">
+		<link rel="stylesheet" href="/src/css/boton.css">
+		<link rel="stylesheet" href="/src/css/card.css">
+		<link rel="stylesheet" href="/src/css/home.css">
+		<link rel="stylesheet" href="/src/css/navbar.css">
+		<link rel="stylesheet" href="/src/css/projects.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 

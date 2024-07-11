@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-
-  site: 'https://mar7155.github.io/Portfolio',
+  
+  site: 'https://localhost:4321',
   integrations: [sitemap()]
 });

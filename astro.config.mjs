@@ -8,7 +8,3 @@ export default defineConfig({
   site: 'https://mar7155.github.io/Portfolio',
   integrations: [sitemap()]
 });
-=======
-    site: 'https://mar7155.github.io/Portfolio'
-});
->>>>>>> 6be1c15ede144eee6393c4fcf2186850da3239fd

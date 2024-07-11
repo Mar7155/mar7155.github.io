@@ -35,7 +35,6 @@ code {
 }
 main {
     margin: auto;
-    padding: 2rem;
     width: auto;
     max-width: calc(100% - 2rem);
     color: white;

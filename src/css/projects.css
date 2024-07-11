@@ -33,6 +33,10 @@ h1{
     .grid-layout-Projects{
         grid-template-columns: 0fr;
     }		
+    .contenedor-Projects{
+        padding-top: 6rem;
+        gap: 4rem;
+    }	
 }
 
 @media (max-width: 800px) {

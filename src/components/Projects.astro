@@ -2,23 +2,93 @@
 import Proyecto1 from "../imageprojects/Proyect1.webp";
 import Proyecto2 from "../imageprojects/Proyect2.webp";
 import Proyecto3 from "../imageprojects/Proyect3.webp";
-import Card from "./Card.astro";
+import Card2 from "./Card2.astro";
+import Tag from "./Tag.astro";
 ---
 
 <section class="contenedor-Projects" id="Projects">
-	<h1>PROJECTS</h1>
+	<h2>PROJECTS</h2>
 	<div class="grid-layout-Projects">
 		<div class="box-Projects">
-			<Card numero="Project 1" descripcion="Web site built with astro and react" href="https://ieee-estl.com/" proyecto={Proyecto1}> 
-			</Card>
+			<Card2
+				titulo="IEEE-ESTL"
+				descripcion="Web site built with astro and react"
+				href="https://ieee-estl.com/"
+				proyecto={Proyecto1}
+			>
+				<Tag cargo="Web Master" />
+				<Tag cargo="Development" />
+			</Card2>
 		</div>
 		<div class="box-Projects">
-			<Card numero="Project 2" descripcion="Point of sales built with Java, Postgres and Docker" href="https://github.com/Mar7155/KokosControl/" proyecto={Proyecto2}> 
-			</Card>
+			<Card2
+				titulo="Kokos-Control"
+				descripcion="Point of sales built with Java, Postgres and Docker"
+				href="https://github.com/Mar7155/KokosControl/"
+				proyecto={Proyecto2}
+			>
+				<Tag cargo="Back-end" />
+			</Card2>
 		</div>
 		<div class="box-Projects">
-			<Card numero="Project 3" descripcion="Web site in pogress for my bussines" href="https://mar7155.github.io/" proyecto={Proyecto3}> 
-			</Card>
+			<Card2
+				titulo="Making-Something"
+				descripcion="Web site in pogress for my bussines"
+				href="https://github.com/Mar7155/TheButtonsFactory"
+				proyecto={Proyecto3}
+			>
+				<Tag cargo="Front-end" />
+				<Tag cargo="Backend-end" />
+			</Card2>
 		</div>
 	</div>
 </section>
+
+<style>
+	h2{
+		font-size: 50px;
+	}
+	.contenedor-Projects {
+		width: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		margin: 4rem 0rem;
+		background-color: rgb(0, 0, 0);
+	}
+
+	.grid-layout-Projects {
+		display: grid;
+		justify-content: center;
+		padding: 8rem 5rem 8rem 5rem;
+		width: 100%;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 2rem;
+	}
+
+	@media (max-width: 1400px) {
+		.grid-layout-Projects {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		.grid-layout-Projects {
+			grid-template-columns: 1fr;
+		}
+		.contenedor-Projects {
+			gap: 4rem;
+		}
+	}
+
+	@media (max-width: 800px) {
+		.grid-layout-Projects {
+			grid-template-columns: 1fr;
+			padding: 0;
+		}
+		.contenedor-Projects {
+			padding-top: 6rem;
+		}
+	}
+</style>

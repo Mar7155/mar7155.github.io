@@ -1,6 +1,5 @@
 ---
 import { string } from "astro/zod";
-
 interface Props {
 	title: string;
 	description: string;
@@ -13,6 +12,7 @@ const {
 	image = "/src/imagepreview/preview.gif",
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+import "./layout.css";
 ---
 
 <!doctype html>

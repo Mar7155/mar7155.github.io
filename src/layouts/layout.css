@@ -1,12 +1,14 @@
 * {
     box-sizing: border-box;
 }
+
 canvas {
     position: absolute;
     top: 0px;
     left: 0px;
     z-index: -1;
 }
+
 html {
     font-family: system-ui, sans-serif;
     color: azure;
@@ -15,6 +17,7 @@ html {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+
 code {
     font-family:
         Menlo,
@@ -26,14 +29,9 @@ code {
         Courier New,
         monospace;
 }
-@font-face {
-    font-family: WidyThin;
-    src: url("/WidyThin.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+
 main {
+    font-family: "Poppins", sans-serif;
     margin: auto;
     width: auto;
     max-width: calc(100% - 2rem);
@@ -41,8 +39,9 @@ main {
     font-size: 20px;
     line-height: 1.6;
 }
+
 h1 {
-    font-size: 4rem;
+    font-size: 50px;
     font-weight: 700;
     line-height: 1;
     text-align: center;

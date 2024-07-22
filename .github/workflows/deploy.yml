@@ -32,4 +32,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./src # Directorio desde el que se desplegará (ajustado a la raíz del repositorio o la carpeta deseada)
+          publish_dir: ./ # Directorio desde el que se desplegará (ajustado a la raíz del repositorio o la carpeta deseada)

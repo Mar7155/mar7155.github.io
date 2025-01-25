@@ -1,5 +1,7 @@
 ---
 import { string } from "astro/zod";
+import { ClientRouter } from "astro:transitions";
+
 interface Props {
 	title: string;
 	description: string;
@@ -24,11 +26,11 @@ import "./layout.css";
 		<script
 			is:inline
 			src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
-		<script src="/src/services/smoothscrooll.js"></script>
 		<link rel="canonical" href={canonicalURL} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ClientRouter />
 
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
@@ -156,7 +158,7 @@ import "./layout.css";
 				const flick = random(100);
 				// 10 percent chance of flickering a number instead
 				if (flick < 10) {
-					fill(120, 3, 1);
+					fill(322, 3, 1);
 					text(round(random(9)), this.x, this.y);
 				} else {
 					text(this.value, this.x, this.y);
@@ -187,15 +189,15 @@ import "./layout.css";
 			}
 
 			draw() {
-				fill(120, 100, 100);
+				fill(322, 100, 100);
 				this.chars.forEach((c, i) => {
 					// 30 percent chance of lit tail
 					const lit = random(100);
 					if (lit < 30) {
 						if (i === this.chars.length - 1) {
-							fill(120, 100, 100);
+							fill(322, 100, 100);
 						} else {
-							fill(120, 100, 10);
+							fill(322, 100, 10);
 						}
 					}
 
@@ -237,5 +239,20 @@ import "./layout.css";
 			background(0);
 			reset();
 		}
+		
+		document.addEventListener('DOMContentLoaded', function() {
+    	var scrollButton = document.getElementById('scrollButton');
+  
+    	scrollButton.addEventListener('click', function() {
+      		var section = document.getElementById('Projects');
+        
+      		var sectionPosition = section.getBoundingClientRect().top + window.scrollY;
+
+      		window.scrollTo({
+        		top: sectionPosition,
+        		behavior: 'smooth'
+      			});
+    		});
+  		});
 	</script>
 </html>

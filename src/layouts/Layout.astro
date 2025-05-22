@@ -11,9 +11,9 @@ interface Props {
 
 const {
 	title,
-	description = "Sofwtare Engineer, Backend/Frontend programmer, 3D Printing Enthusiast. If you can imagine, you can make it! ^^",
-	image = "https://mar7155.github.io/preview/profile.jpg",
-	url = "https://mar7155.github.io/"
+	description,
+	image,
+	url
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 import "./layout.css";

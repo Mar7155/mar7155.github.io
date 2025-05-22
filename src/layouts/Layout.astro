@@ -6,12 +6,14 @@ interface Props {
 	title: string;
 	description: string;
 	image: string;
+	url: string
 }
 
 const {
 	title,
-	description = "Mi portfolio web",
-	image = "/src/imagepreview/preview.gif",
+	description = "Sofwtare Engineer, Backend/Frontend programmer, 3D Printing Enthusiast. If you can imagine, you can make it! ^^",
+	image = "https://mar7155.github.io/preview/profile.jpg",
+	url = "https://mar7155.github.io/"
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 import "./layout.css";
@@ -21,24 +23,34 @@ import "./layout.css";
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="title" content={title} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
 		<script
 			is:inline
 			src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
 		<link rel="canonical" href={canonicalURL} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
 		<ClientRouter />
 
-		<meta name="title" content={title} />
-		<meta name="description" content={description} />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content={Astro.url} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content={new URL(image, Astro.url)} />
+  		<meta name="robots" content="index, follow">
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  		<!-- Open Graph -->
+  		<meta property="og:title" content={title}>
+  		<meta property="og:description" content={description}>
+  		<meta property="og:image" content={image}>
+  		<meta property="og:url" content={url}>
+  		<meta property="og:type" content="website">
+
+  		<!-- Twitter -->
+  		<meta name="twitter:card" content="summary_large_image">
+  		<meta name="twitter:title" content={title}>
+  		<meta name="twitter:description" content={description}>
+  		<meta name="twitter:image" content={url}>
 	</head>
 
 	<body>

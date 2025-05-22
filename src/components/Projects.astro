@@ -1,7 +1,7 @@
 ---
-import Proyecto1 from "../imageprojects/Proyect1.webp";
-import Proyecto2 from "../imageprojects/Proyect2.webp";
-import Proyecto3 from "../imageprojects/Proyect4.webp";
+import Project1 from "../imageprojects/Proyect1.webp";
+import Project5 from "../imageprojects/Project5.webp";
+import Project3 from "../imageprojects/Proyect4.webp";
 import Card2 from "./Card2.astro";
 import Tag from "./Tag.astro";
 ---
@@ -14,7 +14,7 @@ import Tag from "./Tag.astro";
 				titulo="IEEE-ESTL"
 				descripcion="Web site built with astro and react"
 				href="https://ieee-estl.com/"
-				proyecto={Proyecto1}
+				proyecto={Project1}
 			>
 				<Tag cargo="Web Master" />
 				<Tag cargo="Front-End" />
@@ -24,28 +24,30 @@ import Tag from "./Tag.astro";
 		</div>
 		<div class="box-Projects">
 			<Card2
-				titulo="Kokos-Control"
-				descripcion="Point of sales built with Java, Postgres and Docker"
-				href="https://github.com/Mar7155/KokosControl/"
-				proyecto={Proyecto2}
+			titulo="IEEE-ESTL-CInSoft"
+			descripcion="Web Site to Promove CInSoft event"
+			href="https://cinsoft.ieee-estl.com/"
+				proyecto={Project3}
 			>
-				<Tag cargo="Back-End" />
-				<Tag cargo="Java" />
+			<Tag cargo="Front-End" />
+			<Tag cargo="React" />
+			<Tag cargo="TailwindCSS">
 			</Card2>
 		</div>
-	<div class="box-Projects">
+		<div class="box-Projects">
 			<Card2
-				titulo="IEEE-ESTL-CInSoft"
-				descripcion="Web Site to Promove CInSoft event"
-				href="https://cinsoft.ieee-estl.com/"
-				proyecto={Proyecto3}
+				titulo="Making Something"
+				descripcion="Website for my own business Making Something"
+				href="https://makingsomething.netlify.app"
+				proyecto={Project5}
 			>
-				<Tag cargo="Front-End" />
+				<Tag cargo="Full stack" />
+				<Tag cargo="Astro" />
 				<Tag cargo="React" />
-				<Tag cargo="TailwindCSS">
+				<Tag cargo="Express" />
 			</Card2>
 		</div>
-		</div>
+	</div>
 	</div>
 </section>
 

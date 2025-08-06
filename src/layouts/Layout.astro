@@ -1,6 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
-
+import Analytics from '@vercel/analytics/astro'
 interface Props {
 	title: string;
 	description: string;
@@ -53,6 +53,7 @@ import "./layout.css";
 
 	<body>
 		<slot />
+		<Analytics />
 	</body>
 	<script is:inline>
 		const langs = [

@@ -1,5 +1,4 @@
 ---
-import { string } from "astro/zod";
 import { ClientRouter } from "astro:transitions";
 
 interface Props {
@@ -28,7 +27,6 @@ import "./layout.css";
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<script
-			is:inline
 			src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
 		<link rel="canonical" href={canonicalURL} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
